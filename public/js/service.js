@@ -1,0 +1,71 @@
+var service_array = [
+    {
+        'before': "care_before.png",
+        'after':'care_red.png',
+        'big':'care_popup.png',
+        'id':'care_service',
+        'text':'FOR US CARE IS A MUST',
+        'desc':'Ok, setelah anda membeli barang, maka biasanya apapun yang terjadi pada produk yang anda beli adalah tanggung jawab anda sepenuhnya.<br><br>Tidak ada after sales, tidak ada garansi, tidak ada apapun selain nota pembelian<br><br>dan mungkin anda pikir itu hal yang lumrah.<br>Tapi kami tidak..kami berpikir hal itu bukan yang harusnya terjadi.<br><br>Karena itulah kami memberikan pelayanan lebih terhadap produk yang anda beli, mulai dari layanan pemasangan dengan menggunakan peralatan ter-update, memastikan semua tugas terselesaikan dengan hasil terbaik, hingga menanggapi apa yang anda pikirkan setelah perampungan project',
+    },
+    {
+        'before': "hear_before.png",
+        'after':'hear_red.png',
+        'big':'hear_popup.png',
+        'id':'hear_service',
+        'text':'HEAR YOUR THOUGHT',
+        'desc':'Anda harusnya tidak perlu stress mengurus semuanya sendiri. karena justru seharusnya yang anda butuhkan adalah seorang konsultan yang mendampingin anda dan memberikan saran terbaik untuk proyek anda<br><br>dan anda benar. Itulah alasan keberadaan kami, memberikan pendampingan dan saran terbaik untuk membuat project impian anda menjadi nyata<br><br>Segera terhubung dengan kami untuk pendampingan dan saran terbaik bagi project anda',
+    },
+    {
+        'before': "innovation_before.png",
+        'after':'innovation_red.png',
+        'big':'innovation_popup.png',
+        'id':'innovation_service',
+        'text':'INNOVATION',
+        'desc':'Agak sulit untuk mewujudkan hunian impian jika tidak diikuti dengan inovasi. Mengandalkan perhitungan dan pengalaman semata jelas tidak cukup.<br><br>Karena, bagaimana mewujudkan hunian yang sesuai dengan keinginan anda, atau project bangunan prestisius yang sesuai imajinasi anda jika tidak disertai dengan inovasi<br><br>Lantas, apa inovasi yang kami lakukan dalam upaya mewujudkan hal yang tadinya hanya berupa imajinasi dan perencanaan semata, menjadi sesuatu yang nyata, yang bisa anda lihat, sentuh dan nikmati ?<br><br>Bagaimana jika terhubung langsung dengan kami, berdiskusi bersama mungkin akan menjadi awal yang tepat dalam mewujudkan impian anda akan hunian atau bangunan yang mewakili prestise anda',
+    },
+    {
+        'before': "no_matter_before.png",
+        'after':'no_matter_red.png',
+        'big':'no_matter_popup.png',
+        'id':'no_matter_service',
+        'text':'NO MATTER WITH SIZE',
+        'desc':'Jadi, anda menghadapi masalah dengan UKURAN ?<br><br>hmm..maksud kami, proyek bangunan anda mengalami kendala dengan ukuran kaca bangunan yang "nanggung" bahkan karena hal itu, desain indah yang sudah dirancang sesuai keinginan dan impian anda, terancam tidak dapat terlaksana, alias harus dirubah hanya karena penyesuaian dengan ukuran kaca yang tersedia di pasaran tidak sesuai dengan ukuran yang ada didesain.<br><br>satu kata untuk itu, MENYEBALKAN<br><br>kabar baik untuk anda, kini ucapkan selamat tinggal pada hal menyebalkan itu.<br><br>Kami ada sebagai solusi untuk kebutuhan akan ukuran kaca sesuai desain yang dirancang oleh arsitek / interior designer anda.',
+    },
+    {
+        'before': "project_before.png",
+        'after':'project_red.png',
+        'big':'project_popup.png',
+        'id':'project_service',
+        'text':'PROJECT RESULT ORIENTATION',
+        'desc':'BEST RESULT IS A MUST. Itulah yang selalu menjadi fokus kami dalam bekerja disamping juga mengedepankan proses yang benar<br><br>Alasannya sederhana, kami selalu berpendapat bahwa jika hasil yang diperoleh tidak lah maksimal, maka seberapapun keras proses yang kami jalani dan lakukan tentu akan menjadi sia-sia<br><br>Karenanya, kami tidak mentoleransi hasil kerja yang terkesan asal jadi<br><br>karena kami dapat merasakan apa yang klien kami rasakan mengenai kepercayaan yang diberikan dalam setiap project.',
+    },
+    {
+        'before': "ready_before.png",
+        'after':'ready_red.png',
+        'big':'ready_popup.png',
+        'id':'ready_service',
+        'text':"WHEREVER WE'RE READY",
+        'desc':"Project keluar kota ? siapa takut...let's do that! untuk anda, KAMI BISA<br><br>Disaat hampir sebagian besar penyedia jasa yang lain menolak jika ada project yang lokasinya keluar kota, bagi kami, justru ini menjadi suatu tantangan tersendiri.<br><br>Bagaimana menangani project yang bahkan membutuhkan peralatan yang tidak ringan dan bahkan membutuhkan pengiriman material yang ukurannya tidak kecil<br><br>Tentu saja dengan hasil yang memuaskan<br><br>so, outbond project ? YES, THAT'S ACCEPTABLE!",
+    },
+    {
+        'before': "time_before.png",
+        'after':'time_red.png',
+        'big':'time_popup.png',
+        'id':'time_service',
+        'text':"TIME SAVER",
+        'desc':'Bagaimana perasaan anda ketika uang anda telah banyak berkuras untuk project impian namun tidak juga kunjung terwujud ?<br><br>Ok, mungkin anda punya budget yang besar, bahkan sangat besar. Tapi seperti yang kita tahu bersama semakin lama suatu project selesai, makan biaya juga akan semakin membengkak<br><br>Bukankah ini pemborosan ? Lagipula, masak anda ingin project anda rampung dengan waktu yang tidak jelas ?<br><br>Karenanya, ini adalah misi kami, bagaimana memastikan project anda selesai dengan biaya dan waktu se-efisien dan se-efektif mungkin',
+    },
+    {
+        'before': "understand_before.png",
+        'after':'understand_red.png',
+        'big':'understand_popup.png',
+        'id':'understand_service',
+        'text':"UNDERSTAND AND CARE",
+        'desc':[
+            'Mungkin <b>kendala</b> dalam mewujudkan hunian impian keluarga anda, seperti dibawah ini...<hr style="background-color:#f4a669;">1. anda takut ditipu ketika ingin menjalankan project anda<br>2. pekerja yang tidak bekerja sesuai kesepakatan<br>3. biaya sudah habis banyak, tapi project pun belum juga selesai<br>4. tidak ada yang mendampingi atau memberikan saran terbaik ketika menjalankan project anda',
+            'Lantas apa <b>solusi</b> terbaik yang bisa anda lakukan?<hr style="background-color:#f4a669;">solusi nya, anda bisa menyewa mandor atau jasa kontraktor sehingga memudahkan pengerjaan project anda. <br>namun itupun tidak lantas menghemat biaya. Karena tidak semua jasa kontraktor juga menyediakan penjualan barang / produk yang anda butuhkan. yup, barang yang anda butuhkan harus anda cari lagi sendiri.',
+            "<b>Jadi, anda menginginkan ONE STOP SOLUTION betul..?</b><hr style='background-color:#f4a669;'>we have 2 simple things to helping you<br><br>1. we survey the project site collect the data<br>2. calculate the construction's safety degree and discuss the best approach with your team to deliver the best and most safety outcome for you."
+        ],
+    },
+];
+

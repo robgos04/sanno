@@ -1,0 +1,1 @@
+[{"url":"building_gallery_04_00_57.png","desc":"Office Project - Makassar"},{"url":"building_gallery_04_01_12.png","desc":"Office Project 2 - Makassar"},{"url":"building_gallery_04_01_26.png","desc":"Office Project 3 - Makassar"}]
