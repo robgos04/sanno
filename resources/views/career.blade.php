@@ -222,7 +222,7 @@
                 @empty
                 <div class="col-12 career_empty">
                     <h1 style="color: black;">Join Our Team</h1>
-                    <p style="color: black;">We are always looking for talented and passionate individuals to join our team. If you are interested in working with us, please send your CV and portfolio to <b><i><a href="mailto:info@dianaflatglass.com" style="color:black;">info@dianaflatglass.com</a></i></b></p>
+                    <p style="color: black;">We are always looking for talented and passionate individuals to join our team. If you are interested in working with us, please send your CV and portfolio to <b><i><a href="mailto:info@sannoglass.com" style="color:black;">info@sannoglass.com</a></i></b></p>
                 </div>
                 @endforelse
                 
