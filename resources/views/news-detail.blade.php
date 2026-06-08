@@ -244,11 +244,11 @@
                     <!-- Footer: External Link only -->
                     @if($news->newssource === 'External' && $news->newslink)
                     <div class="news-detail-footer">
-                        <a href="{{ $news->newslink }}" target="_blank">
-                            <div class="sanno_cta">
+                        <div class="sanno_cta">
+                            <a href="{{ $news->newslink }}" target="_blank">
                                 Visit Source <img src="{{ asset('/images/cta_arrow.png') }}">
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                     @endif
 

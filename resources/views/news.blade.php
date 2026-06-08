@@ -248,14 +248,18 @@
                                     <p>{{ Str::limit($item->newscontent, 120) }}</p>
                                 </div>
                                 <div class="news-text-footer">
-                                    @if($item->newssource === 'External' && $item->newslink)
-                                        <a href="{{ $item->newslink }}" target="_blank">
-                                            <div class="sanno_cta">Visit News <img src="{{ asset('/images/cta_arrow.png') }}"></div>
-                                        </a>
+                                    @if($item->newssource === 'Internal')
+                                        <div class="sanno_cta">
+                                            <a href="{{ route('show.news.detail', $item->id) }}">
+                                                Read More <img src="{{ asset('/images/cta_arrow.png') }}">
+                                            </a>
+                                        </div>
                                     @else
-                                        <a href="{{ route('show.news.detail', $item->id) }}">
-                                            <div class="sanno_cta">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></div>
-                                        </a>
+                                        <div class="sanno_cta">
+                                            <a href="{{ $item->newslink }}" target="_blank">
+                                                Visit News <img src="{{ asset('/images/cta_arrow.png') }}">
+                                            </a>
+                                        </div>
                                     @endif
                                     <span style="font-size:0.78rem; color:rgba(255,255,255,0.55);">
                                         {{ $item->newssource === 'Internal' ? 'By Sanno': '' }}
@@ -287,14 +291,18 @@
                                     <p>{{ Str::limit($item->newscontent, 120) }}</p>
                                 </div>
                                 <div class="news-text-footer">
-                                    @if($item->newssource === 'External' && $item->newslink)
-                                        <a href="{{ $item->newslink }}" target="_blank">
-                                            <div class="sanno_cta">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></div>
-                                        </a>
+                                    @if($item->newssource === 'Internal')
+                                        <div class="sanno_cta">
+                                            <a href="{{ route('show.news.detail', $item->id) }}">
+                                                Read More <img src="{{ asset('/images/cta_arrow.png') }}">
+                                            </a>
+                                        </div>
                                     @else
-                                        <a href="{{ route('show.news.detail', $item->id) }}">
-                                            <div class="sanno_cta">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></div>
-                                        </a>
+                                        <div class="sanno_cta">
+                                            <a href="{{ $item->newslink }}" target="_blank">
+                                                Visit News <img src="{{ asset('/images/cta_arrow.png') }}">
+                                            </a>
+                                        </div>
                                     @endif
                                 </div>
                             </div>
