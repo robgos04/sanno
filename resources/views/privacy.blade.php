@@ -120,23 +120,6 @@
                     <h2>2. Penggunaan Informasi</h2>
                     <p>Kami dapat mengumpulkan informasi yang Anda berikan secara sukarela, termasuk namun tidak terbatas pada:</p>
                     <ul>
-                        <li>Nama perusahaan</li>
-                        <li>Alamat email</li>
-                        <li>Nomor telepon</li>
-                        <li>Alamat atau lokasi proyek</li>
-                        <li>Informasi lain yang Anda kirimkan melalui formulir kontak, permintaan penawaran, atau komunikasi lainnya</li>
-                    </ul>
-                    <p>Selain itu, kami juga dapat mengumpulkan data teknis secara otomatis, seperti:</p>
-                    <ul>
-                        <li>Alamat IP</li>
-                        <li>Jenis perangkat dan browser</li>
-                        <li>Halaman yang dikunjungi</li>
-                        <li>Waktu dan durasi kunjungan</li>
-                        <li>Data analitik website lainnya</li>
-                    </ul>
-                    <h2>2. Penggunaan Informasi</h2>
-                    <p>Kami dapat mengumpulkan informasi yang Anda berikan secara sukarela, termasuk namun tidak terbatas pada:</p>
-                    <ul>
                         <li>Menanggapi pertanyaan dan permintaan Anda</li>
                         <li>Memberikan informasi mengenai produk dan layanan kami</li>
                         <li>Menyusun penawaran atau konsultasi proyek</li>
