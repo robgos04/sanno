@@ -41,7 +41,7 @@ nav#mainNav {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
-    height: 64px;
+    height: 80px;
 }
 
 /* ── Logo ───────────────────────────── */
@@ -53,7 +53,7 @@ nav#mainNav {
 }
 
 .nav-logo img {
-    height: 36px;
+    height: 32px;
     width: auto;
     object-fit: contain;
 }
@@ -63,11 +63,11 @@ nav#mainNav {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: 'Asenpro', sans-serif;
+    font-family: 'Asen Pro', sans-serif;
 }
 
 .nav-link {
-    font-size: 0.78rem;
+    font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -81,14 +81,12 @@ nav#mainNav {
 
 .nav-link:hover {
     color: rgba(255, 255, 255, 0.85);
-    background: rgba(255, 255, 255, 0.06);
     text-decoration: none;
 }
 
 .nav-link.active {
     color: #ffffff;
     font-weight: 700;
-    background: rgba(255, 255, 255, 0.08);
 }
 
 /* ── Hamburger (mobile) ─────────────── */
@@ -305,7 +303,7 @@ body {
 }
 
 #product_body h1{
-  font-family: 'Asenpro', sans-serif;
+  font-family: 'Asen Pro', sans-serif;
   font-size: 3rem;
 }
 
@@ -320,7 +318,7 @@ body {
 .product_left {
   padding-top: 3%;
   padding-bottom: 5%;
-  padding-left: 8%;
+  padding-left: 5%;
   padding-right: 8%;
 }
 
@@ -345,9 +343,9 @@ body {
 }
  
 .divider {
-  height: 1px;
+  height: 0.75px;
   background-color: #ffffff;
-  opacity: 40%;
+  opacity: 24%;
   width: 100%;
 }
  
@@ -393,7 +391,7 @@ body {
   color: var(--white-80);
   font-weight: 400;
   line-height: 1.5;
-  margin: 0;
+  margin: 7px 0px 0px 0px;
 }
 
 #service{
@@ -421,7 +419,7 @@ body {
 }
 
 .project_content {
-  padding: 5%;
+  padding: 5% 5% 5% 4%;
   font-family: 'Inter', sans-serif;
   font-size: 20px;
 }
@@ -439,7 +437,7 @@ body {
 }
 
 h1 {
-  font-family: 'Asenpro', sans-serif;
+  font-family: 'Asen Pro', sans-serif;
   font-size: 3rem;
 }
 
@@ -474,7 +472,6 @@ h1 {
   min-width: 280px;
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
 }
 
 .project-card img {
@@ -491,7 +488,7 @@ h1 {
   right: 0;
   margin: 0;
   padding: 10px 14px;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.1);
   color: #fff;
   font-size: 0.85rem;
 }
@@ -889,7 +886,7 @@ footer {
 }
 
 .footer-col-title {
-    font-family: 'Asenpro', sans-serif;
+    font-family: 'Asen Pro', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: #ffffff;           /* orange accent — matches your brand */
@@ -981,9 +978,9 @@ footer {
   background-image: url('../images/home_bg.png');
   background-size:cover;
   text-align: left;
-  padding-top: 40%;
+  padding-top: 30%;
   padding-bottom: 10%;
-  padding-left: 5%;
+  padding-left: 4%;
   height: 100%;
   width: 100%;
   font-size: 56px;
@@ -995,11 +992,12 @@ footer {
   font-family: 'Inter', sans-serif;
   color:#ffffff;
   text-align: left;
+  top: 4px;
 }
 
 .sanno_cta {
   font-size: 20px;
-  font-family: 'Asenpro', sans-serif;
+  font-family: 'Asen Pro', sans-serif;
   color: #ffffff !important;
   border: 1px solid #ffffff;
   border-radius: 12px;
@@ -1036,8 +1034,9 @@ footer {
 }
 
 .about_right h1{
-  font-family: 'Asenpro', sans-serif;
+  font-family: 'Asen Pro', sans-serif;
   font-size: 3rem;
+  text-align: left !important;
 }
 
 .about_right {
@@ -1046,12 +1045,17 @@ footer {
   height: auto;
   width: 100%;
   padding: 10%;
-  font-family: 'Asenpro', sans-serif;
+  font-family: 'Asen Pro', sans-serif;
   font-size: 20px;
   color: #ffffff;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1900px) { /* large screen pc */
+  .nav-inner {
+    max-width: 96%;
+  }
+  
   #company_body{
     padding-top:120px;
   }

@@ -22,12 +22,18 @@
         background-position: center;
         height: 100%;
         width: 100%;
-        padding: 4%;
+        padding: 4% 4% 4% 5%;
         color: #ffffff;
     }
     .diana_right {
-        padding-top: 4%;
-        padding-left: 15%;
+        padding-top: 5%;
+        padding-left: 14%;
+    }
+    .diana_right .sanno_cta:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    .sanno_left p{
+        padding-top: 1%;
     }
 
     @media screen and (max-width: 600px) { /* For mobile devices: Adjust gallery background for better visibility and spacing */
@@ -57,7 +63,7 @@
         overflow-x: auto;
         scroll-behavior: smooth;
         gap: 16px;
-        padding: 16px 48px;
+        padding: 16px 0;
         margin-bottom: 30px;
     }
 
@@ -66,8 +72,12 @@
     }
 
     .cards-row .col-12 {
-        flex: 0 0 320px;
-        max-width: 320px;
+        flex: 0 0 400px;
+        max-width: 400px;
+    }
+
+    .project-card {
+        min-width: 400px;
     }
 
     .cards-arrow {
@@ -106,6 +116,27 @@
     .cards-arrow i {
         color: #333;
         font-size: 1rem;
+    }
+
+    .home_left h1{
+        line-height: 1.3;
+    }
+    .about_cta {
+        margin-top: 56px;
+    }
+    .coming-soon {
+        background:#ffffff; 
+        color:#d32f2f; 
+        padding:4px 8px; 
+        border-radius:4px; 
+        font-size:0.65rem; 
+        font-weight:700; 
+        margin-left:3px;
+        vertical-align: top;
+    }
+    .project_button {
+        margin-top: 4%;
+        padding-left: 30%;
     }
 
     @media screen and (max-width: 768px) {
@@ -159,8 +190,8 @@
             <!-- home -->
             <div id="home_body" class="home_title">
                 <div class="row">
-                    <div class="col-md-8 col-sm-8">
-                        <p><b><i>Leading Tempered Glass </i></b><br>Processor in Eastern Indonesia</p>
+                    <div class="col-md-8 col-sm-8 home_left">
+                        <h1><b><i>Leading Tempered Glass </i></b><br>Processor in Eastern Indonesia</h1>
                     </div>
                     <div class="col-md-4 col-sm-4">
                     </div>     
@@ -189,7 +220,13 @@
                                 <p>PT. Sanno Abadi Cemerlang was founded in 1985  and is based in Makassar, South Sulawesi.</p>
                                 <p>PT. SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include <b><i>Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.</i></b></p>
                                 <p>Our products can be found in various residential  and commercial buildings throughout Makassar.  As the largest and most technologically advanced glass processing company in Eastern  Indonesia, we are committed to delivering the  highest quality—faster and better every day.</p>
-                                <p><a href="{{ route('show.about') }}"><div class="sanno_cta">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img></div></a></p>
+                                <p class="about_cta">
+                                    <div class="sanno_cta">
+                                        <a href="{{ route('show.about') }}">
+                                            Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img>
+                                        </a>
+                                    </div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -200,16 +237,14 @@
             <div id="diana_body">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 diana_content">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-sm-8 sanno_left">
-                                    <h2><b>Professional</b><i> Glass Aplicator</i></h2>
-                                    <p>Sebagai aplikator kaca terpercaya, Diana Glass memastikan setiap proses instalasi dilakukan dengan standar kualitas dan keamanan yang tinggi.</p>
-                                </div>
-                                <div class="col-md-4 col-sm-4 diana_right">
-                                    <div class="sanno_cta">
-                                        <a href="https://www.dianaflatglass.co.id/">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8 sanno_left">
+                                <h1><b>Professional</b><i> Glass Aplicator</i></h1>
+                                <p>Sebagai aplikator kaca terpercaya, Diana Glass memastikan setiap proses instalasi dilakukan dengan standar kualitas dan keamanan yang tinggi.</p>
+                            </div>
+                            <div class="col-md-4 col-sm-4 diana_right">
+                                <div class="sanno_cta">
+                                    <a href="https://www.dianaflatglass.co.id/">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
                                 </div>
                             </div>
                         </div>
@@ -276,8 +311,8 @@
                                 <div class="service-body">
                                     <h3 class="service-name">
                                         Laminated Glass
-                                        <span style="background:#ffffff; color:#d32f2f; padding:3px 8px; border-radius:4px; font-size:0.85rem; font-weight:700; margin-left:10px;">
-                                            coming soon
+                                        <span class="coming-soon">
+                                            COMING SOON
                                         </span>
                                     </h3>
                                     <p class="service-desc">Layered safety glass designed for extra strength, security, and reduced glass shattering risk.</p>
@@ -298,17 +333,17 @@
                 <!-- Dark overlay -->
                 <div class="overlay"></div>
 
-                <div class="container project_content">
+                <div class="project_content">
                     <div class="row align-items-center mb-4">
 
                     <!-- Left: Title & Description -->
                     <div class="col-md-6 col-sm-6">
-                        <h1><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Our Project</h1><br>
+                        <h1><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Our Project</h1>
                         <p>Every project we work on is carried out with high standards, quality materials, and experienced experts to ensure neat results</p>
                     </div>
 
                     <!-- Right: Button -->
-                    <div class="col-md-6 col-sm-6 d-flex justify-content-md-end ">
+                    <div class="col-md-6 col-sm-6 d-flex project_button">
                         <div class="sanno_cta">
                             <a href="{{ route('show.project') }}">See All Project <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
                         </div>
@@ -431,8 +466,8 @@
                     <img src="{{ asset('/images/pt_sanno.png') }}" alt="PT. SANNO" class="footer-logo">
                     <p class="footer-tagline"><strong>PT. SANNO</strong> is the first Tempered Glass factory in South Sulawesi.</p>
                     <div class="footer-socials">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/diana.flatglass/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/17jwUP67ve/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
