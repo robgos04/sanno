@@ -154,6 +154,10 @@
             margin: 0;
         }
     }
+
+    @media screen and (min-width: 1900px) { /* large screen pc */
+        .project_button { margin-top: 2%; }
+    }
     </style>
     <body>
         <!-- MENU BAR -->
