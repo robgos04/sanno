@@ -1,7 +1,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{ asset('/images/pt_sanno.png') }}">
+    <!-- Favicon - Browser -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+
+    <!-- Apple iPhone / iPad -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('images/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('images/android-chrome-512x512.png') }}">
+
+    <!-- Web Manifest (Android PWA) -->
+    <link rel="manifest" href="{{ asset('images/site.webmanifest') }}">
+
+    <!-- Windows / IE -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,5 +39,5 @@
     <script src="{{ asset('/js/service.js') }}"></script>
     <script src="{{ asset('/js/product.js') }}"></script>
     
-    <title>PT. Sanno</title>
+    <title>PT. Sanno - Tempered Glass Processor</title>
 </head>

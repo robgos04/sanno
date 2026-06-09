@@ -64,7 +64,7 @@
             <div class="nav-inner">
 
                 <!-- Logo -->
-                <a href="#" class="nav-logo" onclick="$('#home_menu').click()">
+                <a href="{{ route('show.home') }}" class="nav-logo" onclick="$('#home_menu').click()">
                     <img src="{{ asset('/images/pt_sanno.png') }}" alt="PT. SANNO">
                 </a>
 
@@ -80,7 +80,7 @@
                     <a href="{{ route('show.product') }}" id="product_menu" class="nav-link">Product</a>
                     <a href="{{ route('show.project') }}" id="project_menu" class="nav-link">Project</a>
                     <a href="{{ route('show.news') }}" id="news_menu" class="nav-link">News</a>
-                    <a href="{{ route('show.career') }}" id="career_menu" class="nav-link">Career</a>
+                    <!--<a href="{{ route('show.career') }}" id="career_menu" class="nav-link">Career</a> -->
                     <a href="{{ route('show.contact') }}" id="contact_menu" class="nav-link">Contact Us</a>
                 </div>
 

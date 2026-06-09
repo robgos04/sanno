@@ -64,7 +64,7 @@
             <div class="nav-inner">
 
                 <!-- Logo -->
-                <a href="#" class="nav-logo" onclick="$('#home_menu').click()">
+                <a href="{{ route('show.home') }}" class="nav-logo" onclick="$('#home_menu').click()">
                     <img src="{{ asset('/images/pt_sanno.png') }}" alt="PT. SANNO">
                 </a>
 
