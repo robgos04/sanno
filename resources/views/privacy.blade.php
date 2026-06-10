@@ -57,6 +57,10 @@
         .footer-content-list{ margin-bottom: 40%; }
         .footer_content_paragraph { padding: 40px 22px; }
     }
+    @media screen and (min-width: 1900px) { /* large screen pc */
+        .career-top { height: 300px; }
+        .career-top h1 { margin-left: 0; }
+    }
     </style>
     <body>
         <!-- MENU BAR -->
