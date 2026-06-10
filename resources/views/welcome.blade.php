@@ -2,12 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     @include('head')
     <style>
-    .gallery_bg{
-        background-image:url("{{ asset('/images/gallery_bg_1.png') }}"), url("{{ asset('/images/gallery_bg_2.png') }}");
-        background-position: left bottom, right bottom;
-        background-size:30%;
-        background-repeat: no-repeat;
-        margin-top: 60px;
+    #home_body .sanno_cta {
+        margin-left: 40%;
     }
 
     #gallery_modal .modal-content{
@@ -34,23 +30,6 @@
     }
     .sanno_left p{
         padding-top: 1%;
-    }
-
-    @media screen and (max-width: 600px) { /* For mobile devices: Adjust gallery background for better visibility and spacing */
-
-        .gallery_bg{
-            background-image:url("{{ asset('/images/gallery_bg_1.png') }}"), url("{{ asset('/images/gallery_bg_2.png') }}");
-            background-position: left bottom, right top;
-            background-size:contain;
-            background-repeat: no-repeat;
-            margin-top:360px;
-            padding-top:2px;
-        }
-        .diana_right {
-            padding-top: 2%;
-            padding-left: 3%;
-        }
-        .product_left { padding-top: 5%; }
     }
 
     .cards-row-wrapper {
@@ -139,9 +118,29 @@
         padding-left: 30%;
     }
 
+    @media screen and (max-width: 600px) { /* For mobile devices: Adjust gallery background for better visibility and spacing */
+
+        .diana_right {
+            padding-top: 2%;
+            padding-left: 3%;
+        }
+        .product_left { 
+            padding-top: 5%; 
+            padding-left: 10%;
+        }
+    }
+
     @media screen and (max-width: 768px) {
+        #home_body .sanno_cta {
+            margin-left: 2%;
+        }
+        .home_left h1{
+            padding-left: 2%;
+            font-size: 2rem;
+        }
         .cards-row {
             padding: 16px 36px;
+            gap: 190px;
         }
         .cards-row .col-12 {
             flex: 0 0 85%;
@@ -153,10 +152,22 @@
             height: 36px;
             margin: 0;
         }
+        .diana_content {
+            padding-left: 10%;
+            padding-bottom: 6%;
+        }
     }
 
     @media screen and (min-width: 1900px) { /* large screen pc */
+        #home_body .sanno_cta {
+            margin-left: 40%;
+        }
+        .diana_right {
+            padding-top: 3%;
+            padding-left: 18%;
+        }
         .project_button { margin-top: 2%; }
+        .footer-tagline { font-size: 1rem; }
     }
     </style>
     <body>
@@ -220,7 +231,7 @@
                     <div class="col-md-6 col-sm-6 about_right">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-                                <h1><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> About Company</h1><br>
+                                <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> About Company</h2><br>
                                 <p>PT. Sanno Abadi Cemerlang was founded in 1985  and is based in Makassar, South Sulawesi.</p>
                                 <p>PT. SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include <b><i>Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.</i></b></p>
                                 <p>Our products can be found in various residential  and commercial buildings throughout Makassar.  As the largest and most technologically advanced glass processing company in Eastern  Indonesia, we are committed to delivering the  highest quality—faster and better every day.</p>
@@ -243,7 +254,7 @@
                     <div class="col-md-12 col-sm-12 diana_content">
                         <div class="row">
                             <div class="col-md-8 col-sm-8 sanno_left">
-                                <h1><b>Professional</b><i> Glass Aplicator</i></h1>
+                                <h2><b>Professional</b><i> Glass Aplicator</i></h2>
                                 <p>Sebagai aplikator kaca terpercaya, Diana Glass memastikan setiap proses instalasi dilakukan dengan standar kualitas dan keamanan yang tinggi.</p>
                             </div>
                             <div class="col-md-4 col-sm-4 diana_right">
@@ -260,7 +271,7 @@
             <div id="product_body">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 product_left">
-                        <h1><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Glass Processing</h1>
+                        <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Glass Processing</h2>
                         <br>
                         <!-- Service Items -->
                         <div class="service-list">
@@ -342,7 +353,7 @@
 
                     <!-- Left: Title & Description -->
                     <div class="col-md-6 col-sm-6">
-                        <h1><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Our Project</h1>
+                        <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Our Project</h2>
                         <p>Every project we work on is carried out with high standards, quality materials, and experienced experts to ensure neat results</p>
                     </div>
 
@@ -445,8 +456,8 @@
                         <div class="row align-items-center">
 
                         <div class="col-12 col-md-7">
-                            <h2>Make your home be modern</h2>
-                            <p>We are the leading providers of the architectural glass, aluminium, and glass accessories system.</p>
+                            <h2>Modern Space with Glass</h2>
+                            <p>Clean glass designs create a modern look while making your space feel brighter, wider, and more elegant.</p>
                             <div class="sanno_cta">
                                 <a href="{{ route('show.contact') }}">Contact Us <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
                             </div>
@@ -461,14 +472,13 @@
         <!-- -->
     </body>
     <footer>
-        <div class="container">
 
             <div class="footer-main row">
 
                 <!-- Col 1: Logo + Tagline + Socials -->
                 <div class="col-12 col-md-5 footer-brand">
                     <img src="{{ asset('/images/pt_sanno.png') }}" alt="PT. SANNO" class="footer-logo">
-                    <p class="footer-tagline"><strong>PT. SANNO</strong> is the first Tempered Glass factory in South Sulawesi.</p>
+                    <p class="footer-tagline"><strong><i>PT. SANNO</i></strong> is the first Tempered Glass factory in South Sulawesi.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/diana.flatglass/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/share/17jwUP67ve/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -515,14 +525,13 @@
                 <div class="col-12 col-md-6">
                     <p>Copyright &copy;2026 PT. SANNO</p>
                 </div>
-                <div class="col-12 col-md-6 text-md-end">
+                <div class="col-12 col-md-6 text-md-right">
                     <a href="{{ route('show.disclaimer') }}">Disclaimer</a>
                     <a href="{{ route('show.terms') }}">Terms of User</a>
                     <a href="{{ route('show.privacy') }}">Privacy Policy</a>
                 </div>
             </div>
 
-        </div>
     </footer>
 </html>
 <script>
@@ -566,32 +575,6 @@ $(document).ready(function(){
 
     $(".carousel_prev").find('img').hide();
     $(".carousel_next").find('img').hide();
-
-    $(".gallery_bg").find("a").each(function(){
-        var idGallery = $(this).attr("id");
-
-        $("#"+idGallery).on("click", function(){
-            $(".content_gallery").children().remove();
-
-            $('#gallery_modal').modal('show');
-            if(idGallery == "residence_btn"){
-                $(".gallery_show_img").attr("src", baseUrl+"/gallery/residence/"+residence_img[0].url);
-                showGalleryContent(residence_img, "residence");
-                $("#gallery_modal").find(".modal-title").html("<b>Residence</b>");
-                $(".modal-content").css({"background-image":"url("+baseUrl+"/bg_residence.png')"});
-            }else if(idGallery == "building_btn"){
-                $(".gallery_show_img").attr("src", baseUrl+"/gallery/building/"+building_img[0].url);
-                showGalleryContent(building_img, "building");
-                $("#gallery_modal").find(".modal-title").html("<b>Building</b>");
-                $(".modal-content").css({"background-image":"url("+baseUrl+"/bg_building.png')"});
-            }else if(idGallery == "retail_btn"){
-                $(".gallery_show_img").attr("src", baseUrl+"/gallery/retail/"+retail_img[0].url);
-                showGalleryContent(retail_img, "retail");
-                $("#gallery_modal").find(".modal-title").html("<b>Retail</b>");
-                $(".modal-content").css({"background-image":"url("+baseUrl+"/bg_retail.png')"});
-            }
-        });
-    });
 
     //Menu Product
     $.each(product_array, function( index, value ) {
