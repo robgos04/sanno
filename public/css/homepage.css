@@ -154,15 +154,8 @@ nav#mainNav {
   background-color:transparent;
 }
 
-.myVideo { 
-  position:absolute;
-  min-width: 95%; 
-  min-height: 80%;
-  height: 650px;
-  width: 888px;
-  z-index: -100;
-  background-size: cover;
-  overflow: hidden;
+.project-top-copy p{
+    margin-bottom: -2.5rem;
 }
 
 .logo_video{
@@ -1063,6 +1056,9 @@ footer {
   .nav-inner {
     max-width: 96%;
   }
+  .project-top-copy p{
+      margin-bottom: -4.5rem;
+  }
   
   #company_body{
     padding-top:120px;
@@ -1340,6 +1336,10 @@ footer {
 .nav-inner {
         padding: 0 20px;
         height: 56px;
+    }
+
+    .project-top-copy {
+      margin-top: 18px;
     }
 
     .nav-hamburger {

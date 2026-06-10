@@ -21,7 +21,7 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        margin: 0;
+        margin: 4% 0 0 -2%;
     }
     .news-detail-body {
         margin-top: 2%;
@@ -170,6 +170,10 @@
             align-items: flex-start;
         }
     }
+    @media screen and (min-width: 1900px) { /* large screen pc */
+        .news-detail-hero { height: 300px; }
+        .news-detail-hero h1 { margin-left: 0; }
+    }
     </style>
     <body>
         <!-- MENU BAR -->
@@ -274,7 +278,6 @@
         </div>
 
         <footer>
-            <div class="container">
                 <div class="footer-main row">
                     <div class="col-12 col-md-5 footer-brand">
                         <img src="{{ asset('/images/pt_sanno.png') }}" alt="PT. SANNO" class="footer-logo">
@@ -319,13 +322,12 @@
                     <div class="col-12 col-md-6">
                         <p>Copyright &copy;2026 PT. SANNO</p>
                     </div>
-                    <div class="col-12 col-md-6 text-md-end">
+                    <div class="col-12 col-md-6 text-md-right">
                         <a href="{{ route('show.disclaimer') }}">Disclaimer</a>
                         <a href="{{ route('show.terms') }}">Terms of User</a>
                         <a href="{{ route('show.privacy') }}">Privacy Policy</a>
                     </div>
                 </div>
-            </div>
         </footer>
     </body>
     <script>

@@ -2,6 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     @include('head')
     <style>
+    footer {
+        padding-top: 70px;
+    }
     /* ── Career list row gap ────────────────────── */
     .career-list {
         margin-top: 10%;
@@ -27,7 +30,7 @@
         padding-left: 100px;
         padding-right: 100px;
     }
-    .career-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:0;}
+    .career-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:4% 0 0 -2%;}
     .career-top-copy {
         max-width: 420px;
         text-align: left;
@@ -86,45 +89,6 @@
         margin: 0 !important;
     }
 
-    /* ── Bottom: Date + Button ──────────────────── */
-    .career-card-moredetail {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 30px 24px;
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-    .career-card-moredetail p {
-        font-size: 0.82rem !important;
-        color: rgba(255, 255, 255, 0.65) !important;
-        margin: 0 !important;
-    }
-
-    /* ── See Detail button ──────────────────────── */
-    .career-card-moredetail a {
-        text-decoration: none;
-    }
-
-    .career-card-moredetail .sanno_cta {
-        background: transparent !important;
-        border: 2px solid rgba(255, 255, 255, 0.85) !important;
-        color: #fff !important;
-        font-size: 0.85rem !important;
-        font-weight: 600;
-        padding: 9px 22px;
-        border-radius: 8px;
-        letter-spacing: 0.02em;
-        transition: background 0.2s ease, border-color 0.2s ease;
-        white-space: nowrap;
-        display: inline-block;
-    }
-
-    .career-card-moredetail a:hover .sanno_cta {
-        background: rgba(255, 255, 255, 0.15) !important;
-        border-color: #fff !important;
-    }
-
     .contact-input {
         background: rgba(255, 255, 255, 0.08) !important;
         border: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -166,7 +130,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        .career-top{height:auto; padding-left:50px; padding-right:50px; justify-content:center; flex-wrap:wrap; text-align:center; padding-top: 20%; padding-bottom: 40px;}
+        .career-top{height:auto; padding-left:50px; padding-right:50px; justify-content:center; flex-wrap:wrap; text-align:center; padding-top: 20%; padding-bottom: 80px;}
         .career-top h1{font-size:24px; width:100%; justify-content:center;}
         .career-top-copy { width:100%; text-align:center; margin-top: 18px; }
         .career-list{ margin-bottom: 40%; }
@@ -189,6 +153,11 @@
             padding-bottom: 75%; /* taller on mobile for better visibility */
             border-radius: 8px;
         }
+        footer { margin-top: -145px; }
+    }
+    @media screen and (min-width: 1900px) { /* large screen pc */
+        .career-top { height: 300px; }
+        .career-top h1 { margin-left: 0; }
     }
     </style>
     <body>
@@ -283,7 +252,6 @@
         <br>
 
         <footer>
-            <div class="container">
 
                 <div class="footer-main row">
 
@@ -334,14 +302,13 @@
                     <div class="col-12 col-md-6">
                         <p>Copyright &copy;2026 PT. SANNO</p>
                     </div>
-                    <div class="col-12 col-md-6 text-md-end">
+                    <div class="col-12 col-md-6 text-md-right">
                         <a href="{{ route('show.disclaimer') }}">Disclaimer</a>
                         <a href="{{ route('show.terms') }}">Terms of User</a>
                         <a href="{{ route('show.privacy') }}">Privacy Policy</a>
                     </div>
                 </div>
 
-            </div>
         </footer>
     </body>
     <script>

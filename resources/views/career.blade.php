@@ -28,7 +28,7 @@
         padding-left: 100px;
         padding-right: 100px;
     }
-    .career-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:0;}
+    .career-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:4% 0 0 -2%;}
     .career-top-copy {
         max-width: 420px;
         text-align: left;
@@ -251,7 +251,6 @@
         </div>
 
         <footer>
-            <div class="container">
 
                 <div class="footer-main row">
 
@@ -302,14 +301,13 @@
                     <div class="col-12 col-md-6">
                         <p>Copyright &copy;2026 PT. SANNO</p>
                     </div>
-                    <div class="col-12 col-md-6 text-md-end">
+                    <div class="col-12 col-md-6 text-md-right">
                         <a href="{{ route('show.disclaimer') }}">Disclaimer</a>
                         <a href="{{ route('show.terms') }}">Terms of User</a>
                         <a href="{{ route('show.privacy') }}">Privacy Policy</a>
                     </div>
                 </div>
 
-            </div>
         </footer>
     </body>
     <script>

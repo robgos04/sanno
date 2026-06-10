@@ -38,7 +38,7 @@
         color: #ffffff;
         padding-left: 100px;
     }
-    .about-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:0;}
+    .about-top h1{font-size:36px; font-weight:700; display:inline-flex; align-items:center; gap:12px; margin:4% 0 0 -2%;}
     .about-body-row{
         background-image: url("{{ asset('/images/product_background.png') }}");
         background-size: cover;
@@ -73,8 +73,21 @@
         object-fit: cover;
     }
     @media screen and (max-width: 600px) {
-        .about-top{height:200px; padding-left:50px; justify-content:flex-start;}
+        .about-top{
+            height:auto; 
+            padding-left:50px;
+            padding-right:50px; 
+            justify-content:center;
+            flex-wrap:wrap;
+            text-align:center;
+            padding-top: 20%;
+            padding-bottom: 40px;
+        }
         .about-top h1{font-size:24px;}
+    }
+    @media screen and (min-width: 1900px) { /* large screen pc */
+        .about-top { height: 300px; }
+        .about-top h1 { margin-left: 0; }
     }
 
     </style>
@@ -209,7 +222,6 @@
         </div>
 
         <footer>
-            <div class="container">
 
                 <div class="footer-main row">
 
@@ -260,14 +272,13 @@
                     <div class="col-12 col-md-6">
                         <p>Copyright &copy;2026 PT. SANNO</p>
                     </div>
-                    <div class="col-12 col-md-6 text-md-end">
+                    <div class="col-12 col-md-6 text-md-right">
                         <a href="{{ route('show.disclaimer') }}">Disclaimer</a>
                         <a href="{{ route('show.terms') }}">Terms of User</a>
                         <a href="{{ route('show.privacy') }}">Privacy Policy</a>
                     </div>
                 </div>
 
-            </div>
         </footer>
     </body>
     <script>
