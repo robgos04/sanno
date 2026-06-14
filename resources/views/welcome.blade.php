@@ -25,9 +25,6 @@
         padding-top: 5%;
         padding-left: 14%;
     }
-    .diana_right .sanno_cta:hover {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-    }
     .sanno_left p{
         padding-top: 1%;
     }
@@ -117,6 +114,9 @@
         margin-top: 4%;
         padding-left: 30%;
     }
+    .service-name {
+        font-family: 'Asen Pro', sans-serif !important;
+    }
 
     @media screen and (max-width: 600px) { /* For mobile devices: Adjust gallery background for better visibility and spacing */
 
@@ -166,6 +166,7 @@
             padding-top: 3%;
             padding-left: 18%;
         }
+        .product_left { padding-top: 7%; }
         .project_button { margin-top: 2%; }
         .footer-tagline { font-size: 1rem; }
     }
@@ -255,7 +256,7 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-8 sanno_left">
                                 <h2><b>Professional</b><i> Glass Aplicator</i></h2>
-                                <p>Sebagai aplikator kaca terpercaya, Diana Glass memastikan setiap proses instalasi dilakukan dengan standar kualitas dan keamanan yang tinggi.</p>
+                                <p>As a trusted glass applicator, Diana Glass ensures that every installation process is carried out with high quality and safety standards.</p>
                             </div>
                             <div class="col-md-4 col-sm-4 diana_right">
                                 <div class="sanno_cta">
@@ -377,7 +378,7 @@
                         <div class="col-12 col-md-4">
                             <div class="project-card">
                             <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" />
-                            <p class="card-label">{{ $project->projectname }}</p>
+                            <p class="card-label"><b><i>{{ $project->projectname }}</i></b></p>
                             </div>
                         </div>
                         @empty
