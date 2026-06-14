@@ -66,7 +66,7 @@
     }
     .product-card-text h2 {
         margin: 0 0 6px;
-        font-size: 1.25rem;
+        font-size: 1.25rem !important;
         font-weight: 700;
     }
     .product-card-text p {

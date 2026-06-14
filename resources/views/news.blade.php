@@ -76,7 +76,7 @@
     }
     .news-card .news-text-section h2 {
         margin: 0 0 16px;
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
         line-height: 1.1;
         color: #ffffff;
         font-family: 'AsenPro', sans-serif;
