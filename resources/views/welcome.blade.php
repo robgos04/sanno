@@ -232,7 +232,7 @@
                     <div class="col-md-6 col-sm-6 about_right">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-                                <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> About Company</h2><br>
+                                <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> About PT. SANNO</h2><br>
                                 <p>PT. Sanno Abadi Cemerlang was founded in 1985  and is based in Makassar, South Sulawesi.</p>
                                 <p>PT. SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include <b><i>Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.</i></b></p>
                                 <p>Our products can be found in various residential  and commercial buildings throughout Makassar.  As the largest and most technologically advanced glass processing company in Eastern  Indonesia, we are committed to delivering the  highest quality—faster and better every day.</p>
