@@ -220,7 +220,7 @@
             padding-left: 10%;
         }
         #faq_body{
-            padding-top: 5%;
+            padding-top: 10%;
             padding-left: 10%;
             padding-right: 5%;
             padding-bottom: 40%;
@@ -252,6 +252,7 @@
         .diana_content {
             padding-left: 10%;
             padding-bottom: 6%;
+            padding-right: 8%;
         }
     }
 
