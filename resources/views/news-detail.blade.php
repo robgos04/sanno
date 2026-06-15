@@ -30,10 +30,12 @@
         z-index: 2;
         background: #ffffff;
         padding-bottom: 15%;
+        font-family: 'Asen Pro', sans-serif;
+        color: #000000;
     }
     .news-detail-cover {
         width: 100%;
-        max-height: 480px;
+        max-height: 80%;
         object-fit: cover;
         border-radius: 16px;
         display: block;
@@ -44,6 +46,7 @@
         align-items: center;
         gap: 16px;
         margin-bottom: 20px;
+        padding: 0 35% 0 34%;
         flex-wrap: wrap;
     }
     .news-detail-date-box {
@@ -84,6 +87,7 @@
         margin-bottom: 24px;
         line-height: 1.3;
         font-family: 'AsenPro', sans-serif;
+        text-align: center;
     }
     .news-detail-content {
         font-size: 1rem;
@@ -203,7 +207,7 @@
         </div>
 
         <!-- DETAIL BODY -->
-        <div class="container news-detail-body">
+        <div class="news-detail-body">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9">
 
@@ -216,31 +220,24 @@
                         <span class="breadcrumb-current">{{ $news->newstitle }}</span>
                     </nav>
 
+                    <!-- Title -->
+                    <div class="news-detail-title">{{ $news->newstitle }}</div>
+
+                    <!-- Meta: Date + Source -->
+                    <div class="news-detail-meta">
+                        @if($news->newssource === 'Internal')
+                            <span>By PT. SANNO</span>
+                        @else
+                            <span>{{ $news->newssource }}</span>
+                        @endif
+                        <i class="ri-calendar-line"></i><span>{{ \Carbon\Carbon::parse($news->newsdate)->format('l') }}, {{ \Carbon\Carbon::parse($news->newsdate)->format('d') }} {{ \Carbon\Carbon::parse($news->newsdate)->format('F') }} {{ \Carbon\Carbon::parse($news->newsdate)->format('Y') }}
+                        </span>
+                    </div>
+
                     <!-- Cover Image -->
                     <img src="{{ asset('images/news/' . $news->newspic) }}"
                         alt="{{ $news->newstitle }}"
                         class="news-detail-cover" loading="lazy">
-
-                    <!-- Meta: Date + Source -->
-                    <div class="news-detail-meta">
-                        <div class="news-detail-date-box">
-                            <div class="news-date-day">
-                                {{ \Carbon\Carbon::parse($news->newsdate)->format('d') }}
-                            </div>
-                            <div class="news-date-month-year">
-                                <span>{{ \Carbon\Carbon::parse($news->newsdate)->format('F') }}</span>
-                                <span>{{ \Carbon\Carbon::parse($news->newsdate)->format('Y') }}</span>
-                            </div>
-                        </div>
-                        @if($news->newssource === 'Internal')
-                            <span class="news-detail-source-badge">By Sanno</span>
-                        @else
-                            <span class="news-detail-source-badge">{{ $news->newssource }}</span>
-                        @endif
-                    </div>
-
-                    <!-- Title -->
-                    <div class="news-detail-title">{{ $news->newstitle }}</div>
 
                     <!-- Full Content -->
                     <div class="news-detail-content">{{ $news->newscontent }}</div>
