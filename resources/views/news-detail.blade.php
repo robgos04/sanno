@@ -165,6 +165,8 @@
             margin-top: 5%;
             margin-bottom: 0;
             padding-bottom: 43%;
+            padding-left: 5%;
+            padding-right: 2%;
         }
         .news-detail-title {
             font-size: 1.4rem;
@@ -173,10 +175,17 @@
             flex-direction: column;
             align-items: flex-start;
         }
+        .news-detail-meta{
+            padding: 0 0 0 10%;
+        }
+        .news-detail-content{
+            padding-left: 2%;
+        }
     }
     @media screen and (min-width: 1900px) { /* large screen pc */
         .news-detail-hero { height: 300px; }
         .news-detail-hero h1 { margin-left: 0; }
+        .news-detail-meta { padding:0 36% 0 40%; }
     }
     </style>
     <body>
