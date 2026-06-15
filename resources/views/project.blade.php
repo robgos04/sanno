@@ -191,7 +191,7 @@
                         <h2>Modern Spaces with Glass</h2>
                         <p>Clean glass designs create a modern look while making your space feel brighter, wider, and more elegant.</p>
                         <div class="sanno_cta">
-                            <a href="{{ route('show.contact') }}">Contact Us <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                            <a href="{{ route('show.contact') }}">Contact Us <i class="ri-arrow-right-circle-line"></i></a>
                         </div>
                     </div>
 

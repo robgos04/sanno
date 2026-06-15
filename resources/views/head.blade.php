@@ -1,6 +1,24 @@
 <head>
+    <title>PT.SANNO - Tempered Glass Processor in Eastern Indonesia</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PT.SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.">
+    <link rel="canonical" href="https://www.sannoglass.com/"/>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PT.SANNO - Tempered Glass Processor in Eastern Indonesia">
+    <meta property="og:description" content="PT.SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.">
+    <meta property="og:url" content="https://sannoglass.com/">
+    <meta property="og:site_name" content="PT.SANNO">
+    <meta property="og:image" content="https://sannoglass.com/assets/images/logo512x512.jpg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PT.SANNO - Tempered Glass Processor in Eastern Indonesia">
+    <meta name="twitter:description" content="PT.SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.">
+    <meta name="twitter:image" content="https://sannoglass.com/assets/images/logo512x512.jpg">
     <!-- Favicon - Browser -->
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
@@ -26,6 +44,7 @@
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/homepage.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vision.css') }}">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -38,6 +57,39 @@
 
     <script src="{{ asset('/js/service.js') }}"></script>
     <script src="{{ asset('/js/product.js') }}"></script>
-    
-    <title>PT. Sanno - Tempered Glass Processor</title>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": ["Organization","LocalBusiness"],
+    "@id": "https://sannoglass.com/#organization",
+    "name": "PT.SANNO",
+    "url": "https://sannoglass.com/",
+    "telephone":"+62-853-9727-7930",
+    "logo": "https://sannoglass.com/assets/images/logo.png",
+    "description": "PT. SANNO is the first Tempered Glass factory in South Sulawesi. Our production facilities include Tempered Glass Manufacturing, Glass Cutting, Beveling, Polishing, and CNC Processing.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Makassar",
+        "addressRegion": "South Sulawesi",
+        "addressCountry": "Indonesia"
+    },
+    "areaServed": "Indonesia",
+    "sameAs": [
+        "https://www.instagram.com/diana.flatglass",
+        "https://www.facebook.com/share/17jwUP67ve/"
+    ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "@id":"https://sannoglass.com/#website",
+    "url":"https://sannoglass.com/",
+    "name":"PT.SANNO",
+    "publisher":{
+        "@id":"https://sannoglass.com/#organization"
+    }
+    }
+    </script>
 </head>

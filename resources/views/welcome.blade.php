@@ -41,6 +41,11 @@
         gap: 16px;
         padding: 16px 0;
         margin-bottom: 30px;
+
+        /* Hide scrollbar for Chrome, Safari */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
     }
 
     .cards-row::-webkit-scrollbar {
@@ -117,6 +122,92 @@
     .service-name {
         font-family: 'Asen Pro', sans-serif !important;
     }
+    #faq_body{
+        background-image: url("{{ asset('/images/faq_pattern.png') }}"), url("{{ asset('/images/faq_bg.png') }}");
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* Required for Safari browser support */
+        background-size: contain, 100% 100%;
+        background-position: left top, center center; 
+        background-repeat: no-repeat, no-repeat;
+        font-family: 'Asen Pro', sans-serif;
+        font-size: 16px;
+        color: #ffffff !important;
+        padding: 4% 0 12% 0;
+    }
+    .faq_left {
+        padding-top: 3%;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 8%;
+    }
+    .faq_right {
+        padding: 3% 6% 3% 3%;
+    }
+
+    /* --- FAQ Accordion Layout (Glassmorphism) --- */
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .faq-item {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        padding: 20px 24px;
+        transition: all 0.3s ease;
+    }
+
+    .faq-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .faq-header h4 {
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #ffffff;
+        transition: transform 0.3s ease;
+    }
+
+    /* For open items */
+    .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+    }
+
+    .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* When the item is expanded */
+    .faq-item.active .faq-content {
+        max-height: 200px; /* Adjust based on content length */
+        margin-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 14px;
+    }
 
     @media screen and (max-width: 600px) { /* For mobile devices: Adjust gallery background for better visibility and spacing */
 
@@ -127,6 +218,12 @@
         .product_left { 
             padding-top: 5%; 
             padding-left: 10%;
+        }
+        #faq_body{
+            padding-top: 5%;
+            padding-left: 10%;
+            padding-right: 5%;
+            padding-bottom: 40%;
         }
     }
 
@@ -218,7 +315,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="sanno_cta">
-                            <a href="{{ route('show.project') }}">Explore Project <img src="{{ asset('/images/cta_arrow.png') }}"></a></img>
+                            <a href="{{ route('show.project') }}">Explore Project <i class="ri-arrow-right-circle-line"></i></a>
                         </div>
                     </div>
                 </div>   
@@ -239,7 +336,7 @@
                                 <p class="about_cta">
                                     <div class="sanno_cta">
                                         <a href="{{ route('show.about') }}">
-                                            Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img>
+                                            Read More <i class="ri-arrow-right-circle-line"></i>
                                         </a>
                                     </div>
                                 </p>
@@ -260,7 +357,7 @@
                             </div>
                             <div class="col-md-4 col-sm-4 diana_right">
                                 <div class="sanno_cta">
-                                    <a href="https://www.dianaflatglass.co.id/">Read More <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                                    <a href="https://www.dianaflatglass.co.id/">Read More <i class="ri-arrow-right-circle-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -355,13 +452,13 @@
                     <!-- Left: Title & Description -->
                     <div class="col-md-6 col-sm-6">
                         <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Our Project</h2>
-                        <p>Every project we work on is carried out with high standards, quality materials, and experienced experts to ensure neat results</p>
+                        <p>Every project is completed with high standards, quality materials, and expert craftsmanship for precise results.</p>
                     </div>
 
                     <!-- Right: Button -->
                     <div class="col-md-6 col-sm-6 d-flex project_button">
                         <div class="sanno_cta">
-                            <a href="{{ route('show.project') }}">See All Project <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                            <a href="{{ route('show.project') }}">See All Project <i class="ri-arrow-right-circle-line"></i></a>
                         </div>
                     </div>
 
@@ -450,6 +547,77 @@
                 </section>
             </div>-->
 
+            <!-- FAQ -->
+            <div id="faq_body">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 faq_left">
+                        <h2><img src="{{ asset('/images/about_sanno_icon.png') }}"></img> Frequently Asked Questions</h2>
+                        <br>
+                        <p>Explore common questions about tempered glass, laminated glass, cut-size glass, and installation services from <b><i>PT.SANNO</i></b>.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 faq_right">
+                        <div class="faq-list">
+
+                            <!-- Item 1 (Active/Expanded State) -->
+                            <div class="faq-item active">
+                                <div class="faq-header">
+                                    <h4>What is tempered glass?</h4>
+                                    <div class="faq-icon"><i class="ri-arrow-down-circle-line"></i></div>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Tempered glass is a safety glass processed through heat treatment to improve strength, durability, and safety for architectural and interior applications.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    <h4>Can Tempered Glass be cut?</h4>
+                                    <div class="faq-icon"><i class="ri-arrow-down-circle-line"></i></div>
+                                </div>
+                                <div class="faq-content">
+                                    <p>No. Tempered glass cannot be cut, drilled, or modified after the tempering process. All cutting, shaping, and fabrication must be completed before the glass is tempered.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    <h4>Do you provide custom cut-size glass?</h4>
+                                    <div class="faq-icon"><i class="ri-arrow-down-circle-line"></i></div>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Yes, we offer custom glass cutting services based on project specifications and design requirements.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    <h4>What industries and projects do you serve?</h4>
+                                    <div class="faq-icon"><i class="ri-arrow-down-circle-line"></i></div>
+                                </div>
+                                <div class="faq-content">
+                                    <p>We support residential, commercial, hospitality, retail, and large-scale construction projects.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    <h4>Do you provide glass installation services?</h4>
+                                    <div class="faq-icon"><i class="ri-arrow-down-circle-line"></i></div>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Yes. Through our professional applicator team, Diana Glass provides installation services for tempered glass, laminated glass, partitions, facades, railings, shower enclosures, and various interior and exterior glass applications.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- CTA "Make your home be modern" -->
             <div id="contact_body">
                 <section class="cta-section">
@@ -460,7 +628,7 @@
                             <h2>Modern Space with Glass</h2>
                             <p>Clean glass designs create a modern look while making your space feel brighter, wider, and more elegant.</p>
                             <div class="sanno_cta">
-                                <a href="{{ route('show.contact') }}">Contact Us <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                                <a href="{{ route('show.contact') }}">Contact Us <i class="ri-arrow-right-circle-line"></i></a>
                             </div>
                         </div>
 
@@ -555,6 +723,17 @@ document.querySelectorAll('.nav-link').forEach(function (link) {
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
         this.classList.add('active');
     });
+});
+
+// FAQ Accordion Toggle
+$('.faq-header').on('click', function() {
+    var item = $(this).closest('.faq-item');
+    
+    // Toggle active class on clicked element
+    item.toggleClass('active');
+    
+    // Optional: Collapse other open FAQ elements automatically
+    item.siblings().removeClass('active');
 });
 
 $(document).ready(function(){

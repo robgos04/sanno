@@ -224,7 +224,7 @@
 
                             <div class="d-flex align-items-center gap-4">
                                 <button type="submit" class="btn_email sanno_cta" style="cursor:pointer;">
-                                    Submit <img src="{{ asset('/images/cta_arrow.png') }}">
+                                    Submit <i class="ri-arrow-right-circle-line"></i>
                                 </button>
                             </div>
 

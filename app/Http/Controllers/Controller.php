@@ -15,7 +15,7 @@ class Controller extends BaseController
     CONST GALLERY_PHOTO_FOLDER = '/Applications/XAMPP/xamppfiles/htdocs/diana/public/images/gallery';
 
     public function showHome(){
-        $projects = Project::orderBy('id', 'desc')->take(5)->get(); // adjust limit as needed
+        $projects = Project::orderBy('id', 'desc')->take(6)->get(); // adjust limit as needed
         return view('welcome', compact('projects'));
     }
 

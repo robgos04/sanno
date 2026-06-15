@@ -82,6 +82,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.8rem;
     }
     .product-card-cta img {
         width: 100%;
@@ -224,7 +225,7 @@
                             <div class="product-card-cta"
                                 onclick="openLightbox('{{ asset('images/products/' . $product->productpic) }}', '{{ $product->productname }}', '{{ $product->productdesc }}')"
                                 style="cursor:pointer;">
-                                <img src="{{ asset('/images/cta_arrow.png') }}" alt="View">
+                                <i class="ri-arrow-right-circle-line"></i>
                             </div>
                         </div>
                     </div>
@@ -248,7 +249,7 @@
                         <h2>Modern Spaces with Glass</h2>
                         <p>Clean glass designs create a modern look while making your space feel brighter, wider, and more elegant.</p>
                         <div class="sanno_cta">
-                            <a href="{{ route('show.contact') }}">Contact Us <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                            <a href="{{ route('show.contact') }}">Contact Us <i class="ri-arrow-right-circle-line"></i></a>
                         </div>
                     </div>
 

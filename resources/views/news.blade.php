@@ -255,13 +255,13 @@
                                     @if($item->newssource === 'Internal')
                                         <div class="sanno_cta">
                                             <a href="{{ route('show.news.detail', $item->id) }}">
-                                                Read More <img src="{{ asset('/images/cta_arrow.png') }}">
+                                                Read More <i class="ri-arrow-right-circle-line"></i>
                                             </a>
                                         </div>
                                     @else
                                         <div class="sanno_cta">
                                             <a href="{{ $item->newslink }}" target="_blank">
-                                                Visit News <img src="{{ asset('/images/cta_arrow.png') }}">
+                                                Visit News <i class="ri-arrow-right-circle-line"></i>
                                             </a>
                                         </div>
                                     @endif
@@ -298,13 +298,13 @@
                                     @if($item->newssource === 'Internal')
                                         <div class="sanno_cta">
                                             <a href="{{ route('show.news.detail', $item->id) }}">
-                                                Read More <img src="{{ asset('/images/cta_arrow.png') }}">
+                                                Read More <i class="ri-arrow-right-circle-line"></i>
                                             </a>
                                         </div>
                                     @else
                                         <div class="sanno_cta">
                                             <a href="{{ $item->newslink }}" target="_blank">
-                                                Visit News <img src="{{ asset('/images/cta_arrow.png') }}">
+                                                Visit News <i class="ri-arrow-right-circle-line"></i>
                                             </a>
                                         </div>
                                     @endif
@@ -333,7 +333,7 @@
                         <h2>Modern Spaces with Glass</h2>
                         <p>Clean glass designs create a modern look while making your space feel brighter, wider, and more elegant.</p>
                         <div class="sanno_cta">
-                            <a href="{{ route('show.contact') }}">Contact Us <img src="{{ asset('/images/cta_arrow.png') }}"></img></a>
+                            <a href="{{ route('show.contact') }}">Contact Us <i class="ri-arrow-right-circle-line"></i></a>
                         </div>
                     </div>
 

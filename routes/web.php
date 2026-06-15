@@ -14,13 +14,13 @@ use App\Http\Controllers\NewsController;
 */
 
 Route::get('/',           [Controller::class, 'showHome'])->name('show.home');
-Route::get('/about',      [Controller::class, 'showAbout'])->name('show.about');
+Route::get('/about-us',      [Controller::class, 'showAbout'])->name('show.about');
 Route::get('/product',    [ProductController::class, 'index'])->name('show.product');
 Route::get('/project',    [ProjectController::class, 'index'])->name('show.project');
 Route::get('/news',       [NewsController::class, 'index'])->name('show.news');
 Route::get('/news/{id}',  [NewsController::class, 'showDetail'])->name('show.news.detail');
 Route::get('/career',     [CareerController::class, 'index'])->name('show.career');
-Route::get('/contact',    [Controller::class, 'showContact'])->name('show.contact');
+Route::get('/contact-us',    [Controller::class, 'showContact'])->name('show.contact');
 
 // Email + Gallery
 Route::get('/send-email',        [Controller::class, 'sendEmail'])->name('send.email');
