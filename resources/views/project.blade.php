@@ -161,7 +161,7 @@
             @forelse($projects as $project)
                 <div class="col-md-4 col-sm-4">
                     <div class="project-card">
-                        <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}">
+                        <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy">
 
                         {{-- Coming Soon badge on the latest project --}}
                         @if($project->id === $latestProjectId)

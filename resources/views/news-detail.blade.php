@@ -219,7 +219,7 @@
                     <!-- Cover Image -->
                     <img src="{{ asset('images/news/' . $news->newspic) }}"
                         alt="{{ $news->newstitle }}"
-                        class="news-detail-cover">
+                        class="news-detail-cover" loading="lazy">
 
                     <!-- Meta: Date + Source -->
                     <div class="news-detail-meta">

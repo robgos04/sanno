@@ -156,7 +156,7 @@
                         
                                 <!-- Left: Glass image -->
                                 <div class="vm-image">
-                                    <img src="{{ asset('/images/about_vision_mission_img.png') }}" alt="Tempered Glass">
+                                    <img src="{{ asset('/images/about_vision_mission_img.png') }}" alt="Tempered Glass" loading="lazy">
                                 </div>
                         
                                 <!-- Right: Content -->
@@ -165,7 +165,7 @@
                                     <!-- Vision -->
                                     <div class="vm-block">
                                         <h2 class="vm-title">
-                                            <img src="{{ asset('/images/about_sanno_icon.png') }}" class="vm-icon" alt="">
+                                            <img src="{{ asset('/images/about_sanno_icon.png') }}" class="vm-icon" loading="lazy" alt="">
                                             Vision
                                         </h2>
                                         <p class="vm-text">
@@ -195,7 +195,7 @@
                         </section>
                         <br>
                         <section class="about-photo">
-                            <img src="{{ asset('/images/about_photo_img.png') }}" alt="Tempered Glass">
+                            <img src="{{ asset('/images/about_photo_img.png') }}" alt="Tempered Glass" loading="lazy">
                         </section>
                     </div>
                 </div>

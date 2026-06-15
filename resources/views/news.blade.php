@@ -235,7 +235,7 @@
                     <div class="col-md-12 col-sm-12 news-active">
                         <div class="news-card">
                             <div class="news-image">
-                                <img src="{{ asset('images/news/' . $item->newspic) }}" alt="{{ $item->newstitle }}">
+                                <img src="{{ asset('images/news/' . $item->newspic) }}" alt="{{ $item->newstitle }}" loading="lazy">
                             </div>
                             <div class="news-text-section">
                                 <div class="news-date-box">
@@ -278,7 +278,7 @@
                     <div class="col-md-6 col-sm-6 news-non-active">
                         <div class="news-card news-card-vertical">
                             <div class="news-image">
-                                <img src="{{ asset('images/news/' . $item->newspic) }}" alt="{{ $item->newstitle }}">
+                                <img src="{{ asset('images/news/' . $item->newspic) }}" alt="{{ $item->newstitle }}" loading="lazy">
                             </div>
                             <div class="news-text-section">
                                 <div class="news-date-box">

@@ -264,7 +264,7 @@
             padding-left: 18%;
         }
         .product_left { padding-top: 7%; }
-        .project_button { margin-top: 2%; }
+        .project_button { margin-top: 2%; padding-left: 34%; }
         .footer-tagline { font-size: 1rem; }
     }
     </style>
@@ -434,7 +434,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 product_right">
-                        <center><img src="{{ asset('/images/product_image.png') }}" style="height:auto;width:70%;"></img></center>
+                        <center><img src="{{ asset('/images/product_image.png') }}" style="height:auto;width:70%;" loading="lazy"></img></center>
                     </div>
                 </div>
             </div>
@@ -474,7 +474,7 @@
                         @forelse($projects as $project)
                         <div class="col-12 col-md-4">
                             <div class="project-card">
-                            <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" />
+                            <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy" />
                             <p class="card-label"><b><i>{{ $project->projectname }}</i></b></p>
                             </div>
                         </div>
@@ -759,7 +759,7 @@ $(document).ready(function(){
     //Menu Product
     $.each(product_array, function( index, value ) {
         var image_src = baseUrl+"/product/"+value.name+"/"+value.logo;
-        $("#inside_box_solution").append('<div class="contentBlock_solution" id="'+value.name+'"><center><img src="'+image_src+'" style="height:120%;width:100%"></center></div>');
+        $("#inside_box_solution").append('<div class="contentBlock_solution" id="'+value.name+'"><center><img src="'+image_src+'" style="height:120%;width:100%" loading="lazy"></center></div>');
         $("#"+value.name).on("click", function(){
 
             if(value.type == "image"){

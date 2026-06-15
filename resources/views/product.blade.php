@@ -188,7 +188,7 @@
                 align-items: center;
                 gap: 16px;
             ">
-                <img id="lightbox-img" src="" alt=""
+                <img id="lightbox-img" src="" alt="" loading="lazy"
                     style="max-width:100%; max-height:80vh; object-fit:contain; border-radius:12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
                 <p id="lightbox-caption" style="color:rgba(255,255,255,0.8); font-size:0.95rem; margin:0;"></p>
                 <p id="lightbox-desc" style="color:rgba(255,255,255,0.8); font-size:0.9rem; margin:0; max-width:80vw; text-align:center;"></p>
@@ -210,7 +210,7 @@
                 @forelse($products as $index => $product)
                 <div class="col-md-4 col-sm-4">
                     <div class="product-card">
-                        <img src="{{ asset('images/products/' . $product->productpic) }}" alt="{{ $product->productname }}">
+                        <img src="{{ asset('images/products/' . $product->productpic) }}" alt="{{ $product->productname }}" loading="lazy">
                         
                         {{-- Coming Soon badge on the latest product --}}
                         @if($product->id === $latestProductId)
