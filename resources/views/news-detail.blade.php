@@ -185,7 +185,7 @@
     @media screen and (min-width: 1900px) { /* large screen pc */
         .news-detail-hero { height: 300px; }
         .news-detail-hero h1 { margin-left: 0; }
-        .news-detail-meta { padding:0 36% 0 40%; }
+        .news-detail-meta { padding:0 35% 0 38%; }
     }
     </style>
     <body>
