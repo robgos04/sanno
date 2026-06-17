@@ -39,51 +39,9 @@
         object-fit: cover;
     }
 
-    /*Project card */
-    .project-card {
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 0px !important;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.3s ease;
-    }
-
     .card-label {
         padding: 10px 25px !important;
         background: rgba(0,0,0,0.2) !important;
-    }
-
-    .project-card .card-overlay {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        display: flex;
-        align-items: flex-end;
-        padding: 16px;
-    }
-
-    .project-card .card-label {
-        color: #fff;
-        font-family: 'Asenpro', sans-serif !important;
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 0;
-    }
-
-    .project-card:hover .card-overlay {
-        opacity: 1;
-    }
-
-    .project-card:hover img {
-        transform: scale(1.04);
     }
 
     .project-badge-coming-soon {
@@ -103,6 +61,76 @@
         pointer-events: none;
     }
     /**/ 
+
+    .project-sanno {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .project-sanno img {
+        width: 100%;
+        display: block;
+        transition: transform .5s ease;
+    }
+
+    /* Gradient */
+    .project-sanno::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0,0,0,.24),
+            transparent
+        );
+        opacity: 0;
+        transition: .4s ease;
+        z-index: 1;
+    }
+
+    /* Text awalnya hilang */
+    .project-sanno p {
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        color: #fff;
+        margin: 0;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all .4s ease;
+    }
+
+    /* Hover */
+    .project-sanno:hover::before {
+        opacity: 1;
+    }
+
+    .project-sanno:hover p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .project-sanno:hover img {
+        transform: scale(1.08);
+    }
+
+    .product-section {
+        padding-top: 64px;
+    }
+
+    .project-name {
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        margin: 0;
+        font-family: 'Asen Pro', sans-serif;
+        font-weight: bold;
+        color: #fff;
+        font-size: 18px;
+        z-index: 2;
+    }
 
     @media screen and (max-width: 600px) {
         .project-top{height:auto; padding-left:50px; padding-right:50px; justify-content:center; flex-wrap:wrap; text-align:center; padding-top: 20%; padding-bottom: 80px;}
@@ -158,26 +186,26 @@
         <!-- PROJECT BODY -->
         <div class="container-fluid">
             <div class="row project-list">
-            @forelse($projects as $project)
-                <div class="col-md-4 col-sm-4">
-                    <div class="project-card">
-                        <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy">
+                @forelse($projects as $project)
+                    <div class="col-md-4 col-sm-4">
+                        <div class="project-sanno">
+                            <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy">
 
-                        {{-- Coming Soon badge on the latest project --}}
-                        @if($project->id === $latestProjectId)
-                            <div class="project-badge-coming-soon">Many more Projects</div>
-                        @endif
+                            {{-- Coming Soon badge on the latest project --}}
+                            @if($project->id === $latestProjectId)
+                                <div class="project-badge-coming-soon">Many more Projects</div>
+                            @endif
 
-                        <div class="card-overlay">
-                            <p class="card-label"><i>{{ $project->projectname }}</i></p>
+                            <div class="card-overlay">
+                                <p class="project-name"><i>{{ $project->projectname }}</i></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @empty
-                <div class="col-12">
-                    <p style="color:#aaa;">No projects yet.</p>
-                </div>
-            @endforelse
+                @empty
+                    <div class="col-12">
+                        <p style="color:#aaa;">No projects yet.</p>
+                    </div>
+                @endforelse
             </div>
         </div>
         <br>
