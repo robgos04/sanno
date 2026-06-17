@@ -475,8 +475,8 @@
                         @forelse($projects as $project)
                         <div class="col-12 col-md-4">
                             <div class="project-card">
-                            <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy" />
-                            <p class="card-label"><b><i>{{ $project->projectname }}</i></b></p>
+                                <img src="{{ asset('images/projects/' . $project->projectpic) }}" alt="{{ $project->projectname }}" loading="lazy" />
+                                <p class="card-label"><b><i>{{ $project->projectname }}</i></b></p>
                             </div>
                         </div>
                         @empty
