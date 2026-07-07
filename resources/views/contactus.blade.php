@@ -210,20 +210,20 @@
                             <p style="color:rgba(255,255,255,0.70); margin-bottom:32px;">Have questions or need a custom glass solution? Our team is ready to help you with reliable support and professional service.</p>
 
                             <div class="mb-3">
-                                <input type="text" name="contact_name" id="contact_name" class="form-control contact-input" placeholder="Your Name">
+                                <input type="text" name="contact_name" id="contact_name" class="form-control contact-input" placeholder="Your Name" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" name="contact_email" id="contact_email" class="form-control contact-input" placeholder="Email Address">
+                                <input type="email" name="contact_email" id="contact_email" class="form-control contact-input" placeholder="Email Address" required>
                             </div>
                             <div class="mb-3">
-                                <input type="number" name="contact_no" id="contact_no" class="form-control contact-input" placeholder="Phone Number">
+                                <input type="number" name="contact_no" id="contact_no" class="form-control contact-input" placeholder="Phone Number" required>
                             </div>
                             <div class="mb-4">
-                                <textarea name="contact_message" id="contact_message" class="form-control contact-input" rows="4" placeholder="Your message, address, or social media"></textarea>
+                                <textarea name="contact_message" id="contact_message" class="form-control contact-input" rows="4" placeholder="Your message, address, or social media" required></textarea>
                             </div>
 
                             <div class="d-flex align-items-center gap-4">
-                                <button type="submit" class="btn_email sanno_cta" style="cursor:pointer;">
+                                <button type="button" class="btn_email sanno_cta" style="cursor:pointer;">
                                     Submit <i class="ri-arrow-right-circle-line"></i>
                                 </button>
                             </div>
@@ -334,9 +334,43 @@
         if (el) el.classList.add('active');
     }
 
-    $(".btn_email").on("click",function(){
-        sendEmail();
+    $(".btn_email").on("click",function(e){
+        e.preventDefault();
+        if (validateContactForm()) {
+            sendEmail();
+        }
     });
+
+    function validateContactForm() {
+        const fields = [
+            { id: '#contact_name', label: 'Name' },
+            { id: '#contact_email', label: 'Email' },
+            { id: '#contact_no', label: 'Phone number' },
+            { id: '#contact_message', label: 'Message' }
+        ];
+
+        let isValid = true;
+
+        fields.forEach(function(field) {
+            const input = $(field.id);
+            const value = $.trim(input.val());
+
+            if (!value) {
+                isValid = false;
+                input.css('border-color', '#ff6b4a');
+                input.attr('placeholder', field.label + ' is required');
+            } else {
+                input.css('border-color', '');
+            }
+        });
+
+        if (!isValid) {
+            alert('Please fill in all required fields before submitting.');
+            return false;
+        }
+
+        return true;
+    }
 
     function sendEmail(){
         $.ajax({
